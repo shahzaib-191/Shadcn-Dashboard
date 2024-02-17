@@ -25,14 +25,6 @@ interface Setting {
   category: string;
   value: string | number | boolean;
 }
-export default function SettingsPage({}: Props) {
-  return (
-    <div className="flex flex-col gap-5  w-full">
-      <PageTitle title="Settings" />
-      <DataTable columns={columns} data={data} />
-    </div>
-  );
-} 
 
 const columns: ColumnDef<Setting>[] = [
   {
@@ -63,3 +55,11 @@ const data: Setting[] = [
   }
 ];
 
+export default function SettingsPage({}: Props) {
+  return (
+    <div className="flex flex-col gap-5  w-full">
+      <PageTitle title="Settings" />
+      <DataTable columns={columns} data={data} />
+    </div>
+  );
+} 
